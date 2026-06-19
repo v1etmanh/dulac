@@ -1,0 +1,65 @@
+.gate {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: #05030a;
+}
+
+.gate video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
+  background: #05030a;
+}
+
+.overlay {
+  position: absolute;
+  left: 24px;
+  bottom: 22px;
+  display: grid;
+  gap: 4px;
+  color: rgba(245, 230, 200, 0.72);
+  pointer-events: none;
+}
+
+.overlay p {
+  color: var(--ivory-paper);
+  font-family: var(--font-display);
+  font-size: 18px;
+  letter-spacing: 0.16em;
+}
+
+.overlay span {
+  color: rgba(201, 147, 58, 0.72);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.skip {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  min-height: 42px;
+  padding: 0 18px;
+  border: 1px solid rgba(201, 147, 58, 0.52);
+  border-radius: 6px;
+  background: rgba(201, 147, 58, 0.9);
+  color: var(--purple-night);
+  font-weight: 800;
+}
+
+@media (max-width: 640px) {
+  .overlay {
+    left: 16px;
+    bottom: 16px;
+  }
+
+  .skip {
+    top: 16px;
+    right: 16px;
+  }
+}
